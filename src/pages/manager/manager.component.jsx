@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-
 import { mapSubjectsSelector } from "../../redux/marks-manager/manager.selectors";
 import { Route } from "react-router-dom";
 
@@ -9,15 +8,18 @@ import SubjectForm from "../../components/subject-form/subject-form.component";
 import SubjectPage from "../subject/subject.component";
 import SubjectsList from "../../components/subjects-list/subject-list.component";
 
+
+import './manager.styles.scss';
+
 const ManagerPage = ({ match, subjectsList }) => {
     const { isExact } = match;
     console.log(subjectsList)
     return (
-        <div>
-            <h1>Manager Page</h1>
-            <aside>
-                <SubjectForm />
+        <div className="home-page__container">
+            <aside className="aside">
+                <h2>Your subject List</h2>
                 <SubjectsList subjects={subjectsList} />
+                <SubjectForm />
             </aside>
             {isExact ? (
                 <h1>You are in excat page</h1>

@@ -1,0 +1,23 @@
+.form-control{
+    background-color: grey;
+    position: relative;
+    label{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(20px, 10px);
+        pointer-events: none;
+
+    }
+    input{
+        width: 100%;
+        padding: 10px 20px;
+
+        &:focus{
+            & + label{
+                transform: translate(0, 0);
+                font-size: 0.7rem;
+            }
+        }
+    }
+}

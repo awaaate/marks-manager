@@ -1,10 +1,13 @@
 import React from 'react';
 
-const FormControl = ({label, handleChange, ...otherProps}) => (
-    <div>
+import './form-control.styles.scss';
+
+import {StyledFormControl} from  './styled.components'
+const FormControl = ({label, handleChange,value, ...otherProps}) => (
+    <StyledFormControl value={value}>
+        <input onChange={handleChange} value={value} {...otherProps}/>
         <label>{label} </label>
-        <input onChange={handleChange} {...otherProps}/>
-    </div>
+    </StyledFormControl>
 )
 
 export default FormControl

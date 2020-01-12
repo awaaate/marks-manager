@@ -1,8 +1,9 @@
 import React from "react";
 import ParsedLink from "../parsed-link/parsed-link.component";
+import { SubjectListContainer } from "./subject-list.styled";
 
 const SubjectsList = ({ subjects }) => (
-    <div>
+    <SubjectListContainer>
         <ul>
             {subjects.map(({ subjectName, id }) => (
                 <li key={id}>
@@ -10,6 +11,6 @@ const SubjectsList = ({ subjects }) => (
                 </li>
             ))}
         </ul>
-    </div>
+    </SubjectListContainer>
 );
 export default SubjectsList;
