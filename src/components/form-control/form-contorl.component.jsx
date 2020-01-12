@@ -4,7 +4,7 @@ import './form-control.styles.scss';
 
 import {StyledFormControl} from  './styled.components'
 const FormControl = ({label, handleChange,value, ...otherProps}) => (
-    <StyledFormControl value={value}>
+    <StyledFormControl value={value} className="form-control">
         <input onChange={handleChange} value={value} {...otherProps}/>
         <label>{label} </label>
     </StyledFormControl>

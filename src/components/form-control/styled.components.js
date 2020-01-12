@@ -5,9 +5,11 @@ const shrink = css`
     font-size: 0.7rem;
 `;
 export const StyledFormControl = styled.div`
-    background-color: white;
+    background-color: transparent;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
     label {
         position: absolute;
         top: 0;
@@ -19,8 +21,10 @@ export const StyledFormControl = styled.div`
     }
     input {
         width: 100%;
+        height: 100%;
         padding: 10px 20px;
         border: 0;
+        background-color: transparent;
 
         &:focus {
             & + label {

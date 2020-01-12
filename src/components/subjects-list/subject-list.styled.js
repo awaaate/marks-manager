@@ -15,6 +15,7 @@ export const SubjectListContainer = styled.div`
                 text-decoration: none;
                 font-size: 1.3rem;
                 text-transform: capitalize;
+                color: black;
             }
             &:hover {
                 background-color: rgba(0,0,0,0.05);

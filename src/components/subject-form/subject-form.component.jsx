@@ -3,6 +3,7 @@ import FormControl from "../form-control/form-contorl.component";
 import { pushSubject } from "../../redux/marks-manager/manager.actions";
 import { connect } from "react-redux";
 
+import './subject-form.styles.scss'
 class SubjectForm extends React.Component {
     constructor(props) {
         super(props);
@@ -30,10 +31,12 @@ class SubjectForm extends React.Component {
         const { handleChange, handleSubmit } = this;
         const { subjectName } = this.state;
         return (
-            <form onSubmit={handleSubmit}>
+            <form className="subject-form" onSubmit={handleSubmit}>
+                <span>&#43;</span>
                 <FormControl
                     type="text"
-                    label="Subject Name"
+                    label="New subject"
+                    autocomplete="off"
                     handleChange={handleChange}
                     name="subjectName"
                     value={subjectName}

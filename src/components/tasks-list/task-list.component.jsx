@@ -1,13 +1,14 @@
 import React from "react";
 
+import './task-list.styles.scss'
 const TaskList = ({ tasks }) => (
-    <div>
+    <ul className="task-list">
         {tasks.map((task, idx) => (
             <li key={idx}>
-                {task.task} <span>{task.mark}</span>
+                {task.task} <span className="note">{task.mark}</span>
             </li>
         ))}
-    </div>
+    </ul>
 );
 
 export default TaskList;
